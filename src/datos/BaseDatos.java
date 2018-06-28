@@ -20,8 +20,8 @@ public class BaseDatos {
 	private String password = "1111";
 	private String url = "";
 
-	public BaseDatos(){
-		try {			
+	public BaseDatos() {
+		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			url = "jdbc:mysql://" + servidor + "/" + database;
 			conexion = DriverManager.getConnection(url, usuario, password);
@@ -32,6 +32,7 @@ public class BaseDatos {
 			System.out.println(ex);
 		}
 	}
+
 	public BaseDatos(String servidor, String database, String usuario, String password) {
 		try {
 			this.servidor = servidor;
@@ -76,6 +77,7 @@ public class BaseDatos {
 				String url = rs.getString("Url");
 				Pelicula pelicula = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, id, url);
 				peliculas.add(pelicula);
+				System.out.println("as");
 			}
 
 		} catch (SQLException e) {
@@ -84,4 +86,7 @@ public class BaseDatos {
 		}
 		return peliculas;
 	}
+	
+	
+	
 }
