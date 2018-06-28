@@ -1,8 +1,15 @@
-package servicios;
+package datos;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.LinkedList;
+
+import modelos.Pelicula;
 
 public class BaseDatos {
 
@@ -39,6 +46,30 @@ public class BaseDatos {
 		} catch (SQLException ex) {
 			System.out.println(ex);
 		}
-		conexion = null;		
+		conexion = null;
+	}
+	
+	public LinkedList<Pelicula> obtenerPelicula(String sql){
+		LinkedList<Pelicula> peliculas = new LinkedList<>();
+		try {									
+			Statement s = conexion.createStatement();			
+			ResultSet rs = s.executeQuery(sql);
+			while(rs.next()){
+				int id = rs.getInt("idPeliculas");
+			    String titulo = rs.getString("Titulo");
+				String director = rs.getString("Director");
+				Date fechaEstreno=rs.getDate("FechaEstreno");
+				String categoria=rs.getString("Categorias");
+				String resumen=rs.getString("Resumen");
+				String url = rs.getString("Url");
+				Pelicula pelicula = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, id,url);
+				peliculas.add(pelicula);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return peliculas;
 	}
 }
