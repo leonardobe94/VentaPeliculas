@@ -8,18 +8,20 @@ public class Pelicula {
 	private String categoria;
 	private String resumen;
 	private int id;
+	private String url;
 	
 	public Pelicula(){
 		
 	}
 	
-	public Pelicula (String titulo, String director, int fechaEstreno, String categoria, String resumen, int id){
+	public Pelicula (String titulo, String director, int fechaEstreno, String categoria, String resumen, int id, String url){
 		this.titulo = titulo;
 		this.director = director;
 		this.fechaEstreno = fechaEstreno;
 		this.categoria = categoria;
 		this.resumen = resumen;
 		this.id = id;
+		this.url = url;
 	}
 	
 	public void setTitulo (String titulo){
@@ -68,6 +70,14 @@ public class Pelicula {
 	
 	public int getId (){
 		return id;
+	}
+	
+	public void setUrl (String url){
+		this.url = url;
+	}
+	
+	public String getUrl(){
+		return url;
 	}
 	
 	public String toString (){
