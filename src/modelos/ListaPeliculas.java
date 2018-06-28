@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import datos.IDatos;
 
 public class ListaPeliculas implements IDatos{
+	public boolean comprobar = false;
 	private LinkedList<Pelicula> listaPelis;
 	
 	public ListaPeliculas (){
@@ -52,8 +53,8 @@ public class ListaPeliculas implements IDatos{
 	public void borrarPelicula(Object pelicula) {
 		//crear metodo para borrar pelicula y comprobar
 		listaPelis.remove(pelicula);
-		/*boolean comprobar =  listaPelis.contains(pelicula);
-		if (comprobar = false){
+		boolean comprobar =  listaPelis.contains(pelicula);
+		/*if (comprobar = false){
 			System.out.println("La peli esta borrada");
 		}
 		*/
