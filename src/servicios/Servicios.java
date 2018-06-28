@@ -12,12 +12,11 @@ public class Servicios implements IServicios {
 	}
 
 	@Override
-	public void modificarPelicula(Object pelicula) {
-		listaPelis.modificarPelicula(pelicula);
+	public void modificarPelicula(Object pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen) {
+		listaPelis.modificarPelicula(pelicula, null, null, 0, null, null);
 		
 	}
 
-	@Override
 	public Object buscarPelicula(String titulo) {
 		Pelicula pelicula =(Pelicula) listaPelis.buscarPelicula(titulo);
 		return pelicula;
@@ -38,5 +37,11 @@ public class Servicios implements IServicios {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
+
+	
+
+	
 
 }
