@@ -1,6 +1,6 @@
 
 public class Prueba {
 	public void escr() {
-		System.out.println("adsfds");
+		System.out.println("adsfdsasa");
 	}
 }
