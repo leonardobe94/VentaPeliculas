@@ -100,6 +100,7 @@ public class BaseDatos {
 			preparedStatement.setString(7, resumen);
 			preparedStatement.setString(8, url);
 			preparedStatement.executeUpdate();
+			//inserta datos
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
