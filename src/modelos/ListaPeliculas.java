@@ -4,40 +4,36 @@ import java.util.LinkedList;
 
 import datos.IDatos;
 
-public class ListaPeliculas implements IDatos{
+public class  ListaPeliculas<T> implements IDatos<T>{
 	public boolean comprobar = false;
 	private LinkedList<Pelicula> listaPelis;
 	
 	public ListaPeliculas (){
 		
 	}
-	
-	public ListaPeliculas (LinkedList<Pelicula> listaPelis){
-		this.listaPelis = listaPelis;
-	}
-	
-	public void setListaPelis (LinkedList<Pelicula> listaPelis){
-		this.listaPelis = listaPelis;
-	}
-	
-	public LinkedList<Pelicula> getListaPelis (){
-		return listaPelis;
-	}
 
 	@Override
-	public void añadirPelicula(Object pelicula) {
+	public void añadirPelicula(T pelicula) {
 		// TODO Auto-generated method stub
-		
+		if (pelicula instanceof Pelicula){
+		listaPelis.add((Pelicula)pelicula);
+		}else {
+			System.out.println("Información no válida.");
+		}
 	}
 
 	@Override
-	public Object modificarPelicula(Object pelicula) {
-		// TODO Auto-generated method stub
-		return null;
+	public void modificarPelicula (T pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen) {
+		Pelicula peli = (Pelicula) pelicula;
+		peli.setTitulo(titulo);
+		peli.setDirector(director);
+		peli.setFechaEstreno(fechaEstreno);
+		peli.setCategoria(categoria);
+		peli.setResumen(resumen);
 	}
 
 	@Override
-	public Object buscarPelicula(String titulo) {
+	public T buscarPelicula(String titulo) {
 	//crear metodo buscar pelicula
 		Pelicula pelicula = null;
 		for (int i=0; i<listaPelis.size(); i++){
@@ -46,7 +42,7 @@ public class ListaPeliculas implements IDatos{
 			}
 			
 		}
-		return pelicula;
+		return (T)pelicula;
 	}
 
 	@Override
@@ -61,9 +57,11 @@ public class ListaPeliculas implements IDatos{
 	}
 
 	@Override
-	public void recorrerLista(Object lista) {
+	public void recorrerLista(T lista) {
 		// TODO Auto-generated method stub
 		
 	}
+	
+
 
 }
