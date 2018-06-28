@@ -8,6 +8,7 @@ public class Pelicula {
 	private String categoria;
 	private String resumen;
 	private int id;
+	private String url;
 	
 	public Pelicula(){
 		
@@ -68,6 +69,14 @@ public class Pelicula {
 	
 	public int getId (){
 		return id;
+	}
+	
+	public void setUrl (String url){
+		this.url = url;
+	}
+	
+	public String getUrl(){
+		return url;
 	}
 	
 	public String toString (){
