@@ -87,6 +87,26 @@ public class BaseDatos {
 		return peliculas;
 	}
 	
+	public boolean insertar(int id,String titulo,String director,int fechaEstreno,String categoria,String resumen,String url){
+		String sql="insert into peliculas";
+		try {
+			PreparedStatement preparedStatement =conexion.prepareStatement(sql);
+			preparedStatement.setInt(1, id);
+			preparedStatement.setString(2, titulo);
+			preparedStatement.setString(3, categoria);
+			preparedStatement.setString(4, director);
+			preparedStatement.setInt(5, fechaEstreno);
+			preparedStatement.setString(6, categoria);
+			preparedStatement.setString(7, resumen);
+			preparedStatement.setString(8, url);
+			preparedStatement.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return true;
+	}
 	
 	
 }
