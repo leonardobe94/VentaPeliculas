@@ -10,6 +10,7 @@ public class ListaPeliculas<T> implements IDatos<T> {
 	private LinkedList<Pelicula> listaPelis;
 
 	public ListaPeliculas() {
+		
 	}
 
 	public LinkedList<Pelicula> getListaPelis() {
