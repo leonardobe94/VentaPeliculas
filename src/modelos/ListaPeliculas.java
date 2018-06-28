@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import datos.IDatos;
 
 public class  ListaPeliculas<T> implements IDatos<T>{
+	public boolean comprobar = false;
 	private LinkedList<Pelicula> listaPelis;
 	
 	public ListaPeliculas (){
@@ -33,14 +34,26 @@ public class  ListaPeliculas<T> implements IDatos<T>{
 
 	@Override
 	public T buscarPelicula(String titulo) {
-		// TODO Auto-generated method stub
-		return null;
+	//crear metodo buscar pelicula
+		Pelicula pelicula = null;
+		for (int i=0; i<listaPelis.size(); i++){
+			if (titulo.equalsIgnoreCase(listaPelis.get(i).getTitulo())){
+				pelicula = listaPelis.get(i);
+			}
+			
+		}
+		return (T)pelicula;
 	}
 
 	@Override
-	public void borrarPelicula(T pelicula) {
-		// TODO Auto-generated method stub
-		
+	public void borrarPelicula(Object pelicula) {
+		//crear metodo para borrar pelicula y comprobar
+		listaPelis.remove(pelicula);
+		boolean comprobar =  listaPelis.contains(pelicula);
+		/*if (comprobar = false){
+			System.out.println("La peli esta borrada");
+		}
+		*/
 	}
 
 	@Override
