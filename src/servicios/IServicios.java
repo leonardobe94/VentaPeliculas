@@ -1,6 +1,8 @@
 package servicios;
 
+import java.util.LinkedList;
 
+import modelos.Pelicula;
 
 public interface IServicios<T> {
 
@@ -14,4 +16,6 @@ public interface IServicios<T> {
 	public void borrarPelicula (T pelicula);
 	
 	public void recorrerLista (T lista);
+	
+	public LinkedList<Pelicula> obtenerPeliculas();
 }

@@ -1,5 +1,7 @@
 package servicios;
 
+import java.util.LinkedList;
+
 import modelos.ListaPeliculas;
 import modelos.Pelicula;
 
@@ -7,9 +9,20 @@ public class Servicios implements IServicios {
 
 	private ListaPeliculas listaPelis;
 
+
+	
+	public Servicios(){
+		
+	}
+	public Servicios(ListaPeliculas listaPelis) {
+		super();
+		this.listaPelis = listaPelis;
+	}
+
 	@Override
-	public void añadirPelicula(Object pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen, String url) {
-		listaPelis.añadirPelicula(pelicula, titulo, director, fechaEstreno, categoria, resumen, url);
+	public void aÃ±adirPelicula(Object pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen, String url) {
+		listaPelis.aÃ±adirPelicula(pelicula, titulo, director, fechaEstreno, categoria, resumen, url);
+
 
 	}
 	@Override
@@ -38,11 +51,10 @@ public class Servicios implements IServicios {
 		// TODO Auto-generated method stub
 		
 	}
-
 	
-
+	@Override
+	public LinkedList<Pelicula> obtenerPeliculas(){
+		return listaPelis.getListaPelis();
+  }
 	
-
-	
-
 }

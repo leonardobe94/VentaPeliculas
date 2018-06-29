@@ -1,13 +1,17 @@
 package control;
 
 import java.io.IOException;
+import java.util.LinkedList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import modelos.Pelicula;
 import servicios.IServicios;
+import servicios.Servicios;
 
 /**
  * Servlet implementation class Videoclub
@@ -29,7 +33,9 @@ public class Videoclub extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
     protected void procesarRespuesta(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		//Buscar pelicula
+		
+    	
+    	//Buscar pelicula
     	/**
     	 *  String titulo = request.getParameter("titulo");
     	 */
@@ -94,6 +100,8 @@ public class Videoclub extends HttpServlet {
 	}
 
 	public void cargarPeliculas(){
-		
+		servicios = new Servicios();
+		LinkedList<Pelicula> lista = servicios.obtenerPeliculas();
+		//sout
 	}
 }
