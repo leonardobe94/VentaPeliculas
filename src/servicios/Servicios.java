@@ -6,11 +6,12 @@ import modelos.Pelicula;
 public class Servicios implements IServicios {
 
 	private ListaPeliculas listaPelis;
+
 	@Override
 	public void añadirPelicula(Object pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen, String url) {
 		listaPelis.añadirPelicula(pelicula, titulo, director, fechaEstreno, categoria, resumen, url);
-	}
 
+	}
 	@Override
 	public void modificarPelicula(Object pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen) {
 		listaPelis.modificarPelicula(pelicula, titulo, director, fechaEstreno, categoria, resumen);

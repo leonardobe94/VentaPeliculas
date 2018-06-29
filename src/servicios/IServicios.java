@@ -3,8 +3,9 @@ package servicios;
 
 
 public interface IServicios<T> {
-	
+
 	public void añadirPelicula(T pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen, String url);
+
 	
 	public void modificarPelicula (T pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen);
 	

@@ -11,7 +11,7 @@ public class ListaPeliculas<T> implements IDatos<T> {
 
 	//No tocar
 	public ListaPeliculas() {
-		// Creo una conexión para para cargar la base de datos en la lista
+		// Creo una conexiÃ³n para para cargar la base de datos en la lista
 		BaseDatos conexion = new BaseDatos();
 		// Obtengo todas las peliculas al crear una ListaPeliculas
 		this.listaPelis = conexion.obtenerPelicula("select * from peliculas");
@@ -24,7 +24,7 @@ public class ListaPeliculas<T> implements IDatos<T> {
 
 	//No tocar
 	public LinkedList<Pelicula> getListaPelis() {
-		// Creo una conexión para para cargar la base de datos en la lista
+		// Creo una conexiÃ³n para para cargar la base de datos en la lista
 		BaseDatos conexion = new BaseDatos();
 		// Obtengo todas las peliculas al crear una ListaPeliculas
 		this.listaPelis = conexion.obtenerPelicula("select * from peliculas");
@@ -36,11 +36,15 @@ public class ListaPeliculas<T> implements IDatos<T> {
 	}
 
 	@Override
+
 	public void a�adirPelicula(String titulo, String director, int fechaEstreno, String categoria,
 			String resumen, String url) {
 		Pelicula peli = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, url);
-			listaPelis.add(peli);
+
 	}
+
+
+	
 	@Override
 	public void modificarPelicula(T pelicula, String titulo, String director, int fechaEstreno, String categoria,
 			String resumen) {
