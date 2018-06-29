@@ -7,13 +7,13 @@ public class Servicios implements IServicios {
 
 	private ListaPeliculas listaPelis;
 	@Override
-	public void añadirPelicula(Object pelicula) {
-		listaPelis.añadirPelicula(pelicula);
+	public void añadirPelicula(Object pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen) {
+		listaPelis.añadirPelicula(pelicula, titulo, director, fechaEstreno, categoria, resumen);
 	}
 
 	@Override
 	public void modificarPelicula(Object pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen) {
-		listaPelis.modificarPelicula(pelicula, null, null, 0, null, null);
+		listaPelis.modificarPelicula(pelicula, titulo, director, fechaEstreno, categoria, resumen);
 		
 	}
 
