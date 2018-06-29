@@ -7,8 +7,10 @@ public class Servicios implements IServicios {
 
 	private ListaPeliculas listaPelis;
 	@Override
-	public void añadirPelicula(Object pelicula) {
-		listaPelis.añadirPelicula(pelicula);
+	public void añadirPelicula(String titulo, String director, int fechaEstreno, String categoria,
+			String resumen, int id, String url) {
+		listaPelis.añadirPelicula(titulo, director, fechaEstreno,categoria,
+			 resumen, id, url);
 	}
 
 	@Override
