@@ -8,6 +8,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.LinkedList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import modelos.Pelicula;
 
@@ -63,11 +65,10 @@ public class BaseDatos {
 	}
 
 	/*
-	 * 	obtenerPeliculas
-	 *  Consulta las peliculas desde base de datos
-	 *  recibe como parametro un sql para guardar en una lista las peliculas	
+	 * obtenerPeliculas Consulta las peliculas desde base de datos recibe como
+	 * parametro un sql para guardar en una lista las peliculas
 	 * 
-	 * */
+	 */
 	public LinkedList<Pelicula> obtenerPelicula(String sql) {
 		LinkedList<Pelicula> peliculas = new LinkedList<>();
 		try {
@@ -83,7 +84,6 @@ public class BaseDatos {
 				String url = rs.getString("Url");
 				Pelicula pelicula = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, id, url);
 				peliculas.add(pelicula);
-				System.out.println("as");
 			}
 
 		} catch (SQLException e) {
@@ -92,25 +92,25 @@ public class BaseDatos {
 		}
 		return peliculas;
 	}
+
 	/*
-	 * 	insertar
-	 *  Recibe c
-	 *  recibe como parametro un sql para guardar en una lista las peliculas	
+	 * insertar Recibe c recibe como parametro un sql para guardar en una lista
+	 * las peliculas
 	 * 
-	 * */
-	public boolean insertar(int id, String titulo, String director, int fechaEstreno, String categoria, String resumen,
-			String url) {
-		String sql = "insert into peliculas ";
+	 */
+	public boolean insertar(/* int id, */ String titulo, String director, int fechaEstreno, String categoria,
+			String resumen, String url) {
+		String sql = "insert into peliculas (Titulo,Director,FechaEstreno,Categorias,Resumen,Url) "
+				+ "values (?,?,?,?,?,?)";
 		try {
 			PreparedStatement preparedStatement = conexion.prepareStatement(sql);
-			preparedStatement.setInt(1, id);
-			preparedStatement.setString(2, titulo);
-			preparedStatement.setString(3, categoria);
-			preparedStatement.setString(4, director);
-			preparedStatement.setInt(5, fechaEstreno);
-			preparedStatement.setString(6, categoria);
-			preparedStatement.setString(7, resumen);
-			preparedStatement.setString(8, url);
+			// preparedStatement.setInt(1, id);
+			preparedStatement.setString(1, titulo);
+			preparedStatement.setString(2, director);
+			preparedStatement.setInt(3, fechaEstreno);
+			preparedStatement.setString(4, categoria);
+			preparedStatement.setString(5, resumen);
+			preparedStatement.setString(6, url);
 			preparedStatement.executeUpdate();
 			// inserta dato
 
