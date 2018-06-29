@@ -94,6 +94,6 @@ public class Videoclub extends HttpServlet {
 	}
 
 	public void cargarPeliculas(){
-		
+		System.out.println();
 	}
 }
