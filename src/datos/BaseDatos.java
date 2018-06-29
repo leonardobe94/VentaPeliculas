@@ -82,9 +82,6 @@ public class BaseDatos {
 				int fechaEstreno=rs.getInt("FechaEstreno");
 				String categoria=rs.getString("Categorias");
 				String resumen=rs.getString("Resumen");
-				int fechaEstreno = rs.getInt("FechaEstreno");
-				String categoria = rs.getString("Categorias");
-				String resumen = rs.getString("Resumen");
 				String url = rs.getString("Url");
 				Pelicula pelicula = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, id, url);
 				peliculas.add(pelicula);
