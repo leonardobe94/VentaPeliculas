@@ -37,19 +37,10 @@ public class ListaPeliculas<T> implements IDatos<T> {
 
 	@Override
 	public void añadirPelicula(String titulo, String director, int fechaEstreno, String categoria,
-			String resumen, int id, String url) {
-		Pelicula peli = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, id, url);
+			String resumen, String url) {
+		Pelicula peli = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, url);
 			listaPelis.add(peli);
 	}
-	public void añadirPelicula(T pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen) {
-		// TODO Auto-generated method stub
-		if (pelicula instanceof Pelicula) {
-			listaPelis.add((Pelicula) pelicula);
-		} else {
-			System.out.println("InformaciÃ³n no vÃ¡lida.");
-		}
-	}
-
 	@Override
 	public void modificarPelicula(T pelicula, String titulo, String director, int fechaEstreno, String categoria,
 			String resumen) {
@@ -91,4 +82,13 @@ public class ListaPeliculas<T> implements IDatos<T> {
 		}
 
 	}
+
+	@Override
+	public void añadirPelicula(T pelicula, String titulo, String director, int fechaEstreno, String categoria,
+			String resumen, String url) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 }

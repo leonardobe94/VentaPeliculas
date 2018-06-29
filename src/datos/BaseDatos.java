@@ -83,7 +83,7 @@ public class BaseDatos {
 				String categoria=rs.getString("Categorias");
 				String resumen=rs.getString("Resumen");
 				String url = rs.getString("Url");
-				Pelicula pelicula = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, id, url);
+				Pelicula pelicula = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, url);
 				peliculas.add(pelicula);
 			}
 
