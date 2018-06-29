@@ -23,16 +23,7 @@ public class BaseDatos {
 	private String url = "";
 
 	public BaseDatos() {
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			url = "jdbc:mysql://" + servidor + "/" + database;
-			conexion = DriverManager.getConnection(url, usuario, password);
-			System.out.println("Conexion a Base de Datos " + url + " . . . . .Ok");
-		} catch (SQLException ex) {
-			System.out.println(ex);
-		} catch (ClassNotFoundException ex) {
-			System.out.println(ex);
-		}
+
 	}
 
 	public BaseDatos(String servidor, String database, String usuario, String password) {
@@ -51,6 +42,16 @@ public class BaseDatos {
 	}
 
 	public Connection getConexion() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			url = "jdbc:mysql://" + servidor + "/" + database;
+			conexion = DriverManager.getConnection(url, usuario, password);
+			System.out.println("Conexion a Base de Datos " + url + " . . . . .Ok");
+		} catch (SQLException ex) {
+			System.out.println(ex);
+		} catch (ClassNotFoundException ex) {
+			System.out.println(ex);
+		}
 		return conexion;
 	}
 
@@ -78,6 +79,9 @@ public class BaseDatos {
 				int id = rs.getInt("idPeliculas");
 				String titulo = rs.getString("Titulo");
 				String director = rs.getString("Director");
+				int fechaEstreno=rs.getInt("FechaEstreno");
+				String categoria=rs.getString("Categorias");
+				String resumen=rs.getString("Resumen");
 				int fechaEstreno = rs.getInt("FechaEstreno");
 				String categoria = rs.getString("Categorias");
 				String resumen = rs.getString("Resumen");
@@ -104,7 +108,6 @@ public class BaseDatos {
 				+ "values (?,?,?,?,?,?)";
 		try {
 			PreparedStatement preparedStatement = conexion.prepareStatement(sql);
-			// preparedStatement.setInt(1, id);
 			preparedStatement.setString(1, titulo);
 			preparedStatement.setString(2, director);
 			preparedStatement.setInt(3, fechaEstreno);

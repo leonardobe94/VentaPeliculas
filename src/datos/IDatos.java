@@ -2,8 +2,10 @@ package datos;
 
 public interface IDatos<T> {
 	
+
 	
-	public void añadirPelicula(T pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen);
+	public void aÃ±adirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen, int id, String url);
+
 	
 	public void modificarPelicula (T pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen);
 	
