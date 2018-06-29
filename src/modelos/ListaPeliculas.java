@@ -10,7 +10,15 @@ public class ListaPeliculas<T> implements IDatos<T> {
 	private LinkedList<Pelicula> listaPelis;
 
 	public ListaPeliculas() {
-		
+		// Creo una conexión para para cargar la base de datos en la lista
+		BaseDatos conexion = new BaseDatos();
+		// Obtengo todas las peliculas al crear una ListaPeliculas
+		this.listaPelis = conexion.obtenerPelicula("select * from peliculas");
+	}
+
+	public ListaPeliculas(LinkedList<Pelicula> listaPelis) {
+		super();
+		this.listaPelis = listaPelis;
 	}
 
 	public LinkedList<Pelicula> getListaPelis() {
