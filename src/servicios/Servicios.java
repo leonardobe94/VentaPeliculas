@@ -15,7 +15,7 @@ public class Servicios implements IServicios {
 
 	@Override
 	public void modificarPelicula(Object pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen) {
-		listaPelis.modificarPelicula(pelicula, null, null, 0, null, null);
+		listaPelis.modificarPelicula(pelicula, titulo, director, fechaEstreno, categoria, resumen);
 		
 	}
 

@@ -12,6 +12,6 @@ public interface IDatos<T> {
 	
 	public void borrarPelicula (T pelicula);
 	
-	public void recorrerLista (T lista);
+	public void recorrerLista ();
 	
 }
