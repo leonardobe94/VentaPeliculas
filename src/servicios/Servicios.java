@@ -8,6 +8,7 @@ import modelos.Pelicula;
 public class Servicios implements IServicios {
 
 	private ListaPeliculas listaPelis;
+
 	
 	public Servicios(){
 		
@@ -15,11 +16,6 @@ public class Servicios implements IServicios {
 	public Servicios(ListaPeliculas listaPelis) {
 		super();
 		this.listaPelis = listaPelis;
-	}
-
-	@Override
-	public void añadirPelicula(Object pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen) {
-		listaPelis.añadirPelicula(pelicula, titulo, director, fechaEstreno, categoria, resumen);
 	}
 
 	@Override
@@ -53,9 +49,12 @@ public class Servicios implements IServicios {
 	public LinkedList<Pelicula> obtenerPeliculas(){
 		return listaPelis.getListaPelis();
 	}
-
+	@Override
+	public void añadirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen,
+			int id, String url) {
+		// TODO Auto-generated method stub
+		
+		
+	}
 	
-
-	
-
 }
