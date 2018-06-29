@@ -62,6 +62,12 @@ public class BaseDatos {
 		conexion = null;
 	}
 
+	/*
+	 * 	obtenerPeliculas
+	 *  Consulta las peliculas desde base de datos
+	 *  recibe como parametro un sql para guardar en una lista las peliculas	
+	 * 
+	 * */
 	public LinkedList<Pelicula> obtenerPelicula(String sql) {
 		LinkedList<Pelicula> peliculas = new LinkedList<>();
 		try {
@@ -86,11 +92,17 @@ public class BaseDatos {
 		}
 		return peliculas;
 	}
-	
-	public boolean insertar(int id,String titulo,String director,int fechaEstreno,String categoria,String resumen,String url){
-		String sql="insert into peliculas";
+	/*
+	 * 	insertar
+	 *  Recibe c
+	 *  recibe como parametro un sql para guardar en una lista las peliculas	
+	 * 
+	 * */
+	public boolean insertar(int id, String titulo, String director, int fechaEstreno, String categoria, String resumen,
+			String url) {
+		String sql = "insert into peliculas ";
 		try {
-			PreparedStatement preparedStatement =conexion.prepareStatement(sql);
+			PreparedStatement preparedStatement = conexion.prepareStatement(sql);
 			preparedStatement.setInt(1, id);
 			preparedStatement.setString(2, titulo);
 			preparedStatement.setString(3, categoria);
@@ -100,14 +112,13 @@ public class BaseDatos {
 			preparedStatement.setString(7, resumen);
 			preparedStatement.setString(8, url);
 			preparedStatement.executeUpdate();
-			//inserta dato
-			
+			// inserta dato
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return true;
 	}
-	
-	
+
 }
