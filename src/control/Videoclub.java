@@ -93,4 +93,7 @@ public class Videoclub extends HttpServlet {
 		procesarRespuesta(request, response);	
 	}
 
+	public void cargarPeliculas(){
+		
+	}
 }

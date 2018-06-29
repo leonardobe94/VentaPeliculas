@@ -9,8 +9,9 @@ public class ListaPeliculas<T> implements IDatos<T> {
 	public boolean comprobar = false;
 	private LinkedList<Pelicula> listaPelis;
 
+	//No tocar
 	public ListaPeliculas() {
-		// Creo una conexi�n para para cargar la base de datos en la lista
+		// Creo una conexión para para cargar la base de datos en la lista
 		BaseDatos conexion = new BaseDatos();
 		// Obtengo todas las peliculas al crear una ListaPeliculas
 		this.listaPelis = conexion.obtenerPelicula("select * from peliculas");
@@ -21,8 +22,9 @@ public class ListaPeliculas<T> implements IDatos<T> {
 		this.listaPelis = listaPelis;
 	}
 
+	//No tocar
 	public LinkedList<Pelicula> getListaPelis() {
-		// Creo una conexi�n para para cargar la base de datos en la lista
+		// Creo una conexión para para cargar la base de datos en la lista
 		BaseDatos conexion = new BaseDatos();
 		// Obtengo todas las peliculas al crear una ListaPeliculas
 		this.listaPelis = conexion.obtenerPelicula("select * from peliculas");
@@ -34,12 +36,17 @@ public class ListaPeliculas<T> implements IDatos<T> {
 	}
 
 	@Override
-	public void a�adirPelicula(T pelicula) {
+	public void añadirPelicula(String titulo, String director, int fechaEstreno, String categoria,
+			String resumen, int id, String url) {
+		Pelicula peli = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, id, url);
+			listaPelis.add(peli);
+
+	public void añadirPelicula(T pelicula) {
 		// TODO Auto-generated method stub
 		if (pelicula instanceof Pelicula) {
 			listaPelis.add((Pelicula) pelicula);
 		} else {
-			System.out.println("Informaci�n no v�lida.");
+			System.out.println("Información no válida.");
 		}
 	}
 
