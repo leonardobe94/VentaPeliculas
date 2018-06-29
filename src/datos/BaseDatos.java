@@ -79,6 +79,9 @@ public class BaseDatos {
 				int id = rs.getInt("idPeliculas");
 				String titulo = rs.getString("Titulo");
 				String director = rs.getString("Director");
+				int fechaEstreno=rs.getInt("FechaEstreno");
+				String categoria=rs.getString("Categorias");
+				String resumen=rs.getString("Resumen");
 				int fechaEstreno = rs.getInt("FechaEstreno");
 				String categoria = rs.getString("Categorias");
 				String resumen = rs.getString("Resumen");
