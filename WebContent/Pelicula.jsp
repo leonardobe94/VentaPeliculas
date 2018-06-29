@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"	
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE HTML>
 
 <html>
@@ -49,26 +50,25 @@
 					</div>
 					<div class="col-6 col-12-small">
 						<p>Sinopsis: En el futuro, un joven llamado Jim Hawkins, es un
-							gran fan√°tico de las historias del Capit√°n Flint, por su
+							gran fan·tico de las historias del Capit·n Flint, por su
 							capacidad de robar tesoros y desaparecer sin dejar rastro. Se
-							dice que el bot√≠n de mil mundos se encuentra en un planeta en
-							donde la llaman: "El Planeta del Tesoro". 12 a√±os despu√©s, el
+							dice que el botÌn de mil mundos se encuentra en un planeta en
+							donde la llaman: "El Planeta del Tesoro". 12 aÒos despuÈs, el
 							joven Jim se ha convertido en un adolescente desobediente y
-							aislado despu√©s de que su padre lo dejara para marcharse. Un d√≠a,
-							una nave espacial se estrella cerca de la posada donde viven √©l y
+							aislado despuÈs de que su padre lo dejara para marcharse. Un dÌa,
+							una nave espacial se estrella cerca de la posada donde viven Èl y
 							su madre. El piloto, Billy Bones, a momentos de morir le da a Jim
-							una esfera y le dice que "tenga cuidado con el cyborg". Despu√©s
+							una esfera y le dice que "tenga cuidado con el cyborg". DespuÈs
 							de esto, una banda de piratas llegan y queman la posada de
 							completo. Jim, su madre y su amigo-perro el Dr. Delbert Doppler
 							logran huir. En el estudio de Doppler, Jim se da cuenta de que
-							esa esfera es un proyector hologr√°fico, que muestra un mapa
-							estrella que lleva a la ubicaci√≥n del Planeta del Tesoro. Jim
-							cree que con ir a la b√∫squeda, pueda lograr ser una mejor persona
-							y reconstruir la posada de su madre. Su madre no est√° de acuerdo
-							al principio pero con la convinci√≥n de Doppler, su madre acepta y
+							esa esfera es un proyector hologr·fico, que muestra un mapa
+							estrella que lleva a la ubicaciÛn del Planeta del Tesoro. Jim
+							cree que con ir a la b˙squeda, pueda lograr ser una mejor persona
+							y reconstruir la posada de su madre. Su madre no est· de acuerdo
+							al principio pero con la convinciÛn de Doppler, su madre acepta y
 							lo deja que vaya por unos meses. Doppler encarga a un barco
 							llamado el RLS Legacy.</p>
 					</div>
-
 </body>
 </html>
