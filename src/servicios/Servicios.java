@@ -9,6 +9,7 @@ public class Servicios implements IServicios {
 
 	private ListaPeliculas listaPelis;
 
+
 	
 	public Servicios(){
 		
@@ -18,6 +19,12 @@ public class Servicios implements IServicios {
 		this.listaPelis = listaPelis;
 	}
 
+	@Override
+	public void añadirPelicula(Object pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen, String url) {
+		listaPelis.añadirPelicula(pelicula, titulo, director, fechaEstreno, categoria, resumen, url);
+
+
+	}
 	@Override
 	public void modificarPelicula(Object pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen) {
 		listaPelis.modificarPelicula(pelicula, titulo, director, fechaEstreno, categoria, resumen);
@@ -48,13 +55,6 @@ public class Servicios implements IServicios {
 	@Override
 	public LinkedList<Pelicula> obtenerPeliculas(){
 		return listaPelis.getListaPelis();
-	}
-	@Override
-	public void a�adirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen,
-			int id, String url) {
-		// TODO Auto-generated method stub
-		
-		
-	}
+  }
 	
 }

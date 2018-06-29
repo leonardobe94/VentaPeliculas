@@ -24,6 +24,17 @@ public class Pelicula {
 		this.url = url;
 	}
 	
+	public Pelicula(String titulo2, String director2, int fechaEstreno2, String categoria2, String resumen2,
+			String url2) {
+		this.titulo = titulo;
+		this.director = director;
+		this.fechaEstreno = fechaEstreno;
+		this.categoria = categoria;
+		this.resumen = resumen;
+		this.url = url;
+		
+	}
+
 	public void setTitulo (String titulo){
 		this.titulo = titulo;
 	}
