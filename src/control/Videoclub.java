@@ -102,5 +102,6 @@ public class Videoclub extends HttpServlet {
 	public void cargarPeliculas(){
 		servicios = new Servicios();
 		LinkedList<Pelicula> lista = servicios.obtenerPeliculas();
+		//sout
 	}
 }
