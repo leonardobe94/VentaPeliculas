@@ -9,6 +9,7 @@ public class ListaPeliculas<T> implements IDatos<T> {
 	public boolean comprobar = false;
 	private LinkedList<Pelicula> listaPelis;
 
+	//No tocar
 	public ListaPeliculas() {
 		// Creo una conexión para para cargar la base de datos en la lista
 		BaseDatos conexion = new BaseDatos();
@@ -21,6 +22,7 @@ public class ListaPeliculas<T> implements IDatos<T> {
 		this.listaPelis = listaPelis;
 	}
 
+	//No tocar
 	public LinkedList<Pelicula> getListaPelis() {
 		// Creo una conexión para para cargar la base de datos en la lista
 		BaseDatos conexion = new BaseDatos();
