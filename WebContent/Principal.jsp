@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML>
 
 <html>
@@ -23,76 +24,34 @@
 
 				<!-- Header -->
 				<header id="header">
-					<a href="Principal.jsp" class="logo"><strong>Tienda Online peliculas</strong> Netfly</a>
+					<a href="<%=request.getContextPath() + "/Videoclub"%>" class="logo"><strong>Tienda
+							Online peliculas</strong> Netfly</a>
 				</header>
 
 				<!-- Content -->
 				<section>
-					<header class="main">
-						<h1>Netfly</h1>
-					</header>
 
 					<!-- Content -->
-					<h2 id="content">Sample Content</h2>
-					<p>Top ventas</p>
+					<h2 id="content"></h2>
+					<p></p>
 
-					<div class="col-6 col-12-small">
-
-						<p>Top alquiler</p>
-					</div>
+					<div class="col-6 col-12-small"></div>
 					<div class="col-6 col-12-small"></div>
 
 					<div class="row gtr-200">
 						<div class="col-6 col-12-medium">
-
-							<h3>Image</h3>
-
-							<h4>Fit</h4>
-							<span class="image fit"><img src="images/pic11.jpg" alt="" /></span>
+							<span class="image fit"><img src="images/netflix.jpg"
+								alt="" /></span>
 							<div class="box alt">
 								<div class="row gtr-50 gtr-uniform">
-									<div class="col-4">
-										<span class="image fit"><img src="images/pic01.jpg"
-											alt="" /></span>
-									</div>
-									<div class="col-4">
-										<span class="image fit"><img src="images/pic02.jpg"
-											alt="" /></span>
-									</div>
-									<div class="col-4">
-										<span class="image fit"><img src="images/pic03.jpg"
-											alt="" /></span>
-									</div>
-
-									<div class="col-4">
-										<span class="image fit"><img src="images/pic03.jpg"
-											alt="" /></span>
-									</div>
-									<div class="col-4">
-										<span class="image fit"><img src="images/pic01.jpg"
-											alt="" /></span>
-									</div>
-									<div class="col-4">
-										<span class="image fit"><img src="images/pic02.jpg"
-											alt="" /></span>
-									</div>
-
-									<div class="col-4">
-										<span class="image fit"><img src="images/pic02.jpg"
-											alt="" /></span>
-									</div>
-									<div class="col-4">
-										<span class="image fit"><img src="images/pic03.jpg"
-											alt="" /></span>
-									</div>
-									<div class="col-4">
-										<span class="image fit"><img
-											src="images/Configuracion.png" alt="" /> </span>
-									</div>
+									<c:forEach var="pelicula" items="${listado}">
+										<div class="col-4">
+											${pelicula.titulo} <span class="image fit"><img
+												src=${pelicula.url } alt="" /></span>
+										</div>
+									</c:forEach>
 								</div>
 							</div>
-
-
 
 						</div>
 					</div>
@@ -109,7 +68,8 @@
 				<!-- Search -->
 				<section id="search" class="alt">
 					<form method="post" action="#">
-						<input type="text" name="query" id="query" placeholder="Buscar pelicula" />
+						<input type="text" name="query" id="query"
+							placeholder="Buscar pelicula" />
 					</form>
 				</section>
 				<!-- Menu -->
@@ -118,7 +78,7 @@
 						<h2>Menu</h2>
 					</header>
 					<ul>
-						<li><a href="index.html">Peliculas</a></li>
+						<li><a href="<%=request.getContextPath() + "/Videoclub"%>">Peliculas</a></li>
 						<li><span class="opener">Categoria</span>
 							<ul>
 								<li><a href="#">perro</a></li>
@@ -126,10 +86,8 @@
 								<li><a href="#">Tempus Magna</a></li>
 								<li><a href="#">Feugiat Veroeros</a></li>
 							</ul></li>
-
 					</ul>
 				</nav>
-
 				<header class="major">
 					<h2>Get in touch</h2>
 				</header>
@@ -141,19 +99,19 @@
 						Nashville, TN 00000-0000
 					</li>
 				</ul>
-		</section>
+				</section>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<p class="copyright">
-				&copy; Untitled. All rights reserved. Demo Images: <a
-					href="https://unsplash.com">Unsplash</a>. Design: <a
-					href="https://html5up.net">HTML5 UP</a>.
-			</p>
-		</footer>
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">
+						&copy; Untitled. All rights reserved. Demo Images: <a
+							href="https://unsplash.com">Unsplash</a>. Design: <a
+							href="https://html5up.net">HTML5 UP</a>.
+					</p>
+				</footer>
 
-	</div>
-	</div>
+			</div>
+		</div>
 
 	</div>
 

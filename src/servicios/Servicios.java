@@ -7,12 +7,10 @@ import modelos.Pelicula;
 
 public class Servicios implements IServicios {
 
-	private ListaPeliculas listaPelis;
+	private ListaPeliculas listaPelis ;
 
-
-	
 	public Servicios(){
-		
+		this.listaPelis=new ListaPeliculas<>();
 	}
 	public Servicios(ListaPeliculas listaPelis) {
 		super();
@@ -53,7 +51,7 @@ public class Servicios implements IServicios {
 	}
 	
 	@Override
-	public LinkedList<Pelicula> obtenerPeliculas(){
+	public LinkedList<Pelicula> getListaPelis(){		
 		return listaPelis.getListaPelis();
   }
 	

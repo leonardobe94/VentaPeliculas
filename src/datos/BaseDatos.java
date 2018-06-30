@@ -23,7 +23,18 @@ public class BaseDatos {
 	private String url = "";
 
 	public BaseDatos() {
-
+		try {
+			this.servidor = servidor;
+			this.database = database;
+			Class.forName("com.mysql.jdbc.Driver");
+			url = "jdbc:mysql://" + servidor + "/" + database;
+			conexion = DriverManager.getConnection(url, usuario, password);
+			System.out.println("Conexion a Base de Datos " + url + " . . . . .Ok");
+		} catch (SQLException ex) {
+			System.out.println(ex);
+		} catch (ClassNotFoundException ex) {
+			System.out.println(ex);
+		}
 	}
 
 	public BaseDatos(String servidor, String database, String usuario, String password) {
@@ -83,7 +94,7 @@ public class BaseDatos {
 				String categoria=rs.getString("Categorias");
 				String resumen=rs.getString("Resumen");
 				String url = rs.getString("Url");
-				Pelicula pelicula = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, url);
+				Pelicula pelicula = new Pelicula(titulo, director, fechaEstreno, categoria, resumen,id, url);
 				peliculas.add(pelicula);
 			}
 
