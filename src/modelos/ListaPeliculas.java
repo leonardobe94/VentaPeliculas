@@ -9,12 +9,9 @@ public class ListaPeliculas<T> implements IDatos<T> {
 	public boolean comprobar = false;
 	private LinkedList<Pelicula> listaPelis;
 
-	//No tocar
+	// No tocar
 	public ListaPeliculas() {
-		// Creo una conexiÃ³n para para cargar la base de datos en la lista
-		BaseDatos conexion = new BaseDatos();
-		// Obtengo todas las peliculas al crear una ListaPeliculas
-		this.listaPelis = conexion.obtenerPelicula("select * from peliculas");
+		// Creo una conexiÃ³n para para cargar la base de datos en la lista		
 	}
 
 	public ListaPeliculas(LinkedList<Pelicula> listaPelis) {
@@ -22,7 +19,7 @@ public class ListaPeliculas<T> implements IDatos<T> {
 		this.listaPelis = listaPelis;
 	}
 
-	//No tocar
+	// No tocar
 	public LinkedList<Pelicula> getListaPelis() {
 		// Creo una conexiÃ³n para para cargar la base de datos en la lista
 		BaseDatos conexion = new BaseDatos();
@@ -37,14 +34,12 @@ public class ListaPeliculas<T> implements IDatos<T> {
 
 	@Override
 
-	public void a�adirPelicula(String titulo, String director, int fechaEstreno, String categoria,
-			String resumen, String url) {
+	public void a�adirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen,
+			String url) {
 		Pelicula peli = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, url);
 
 	}
 
-
-	
 	@Override
 	public void modificarPelicula(T pelicula, String titulo, String director, int fechaEstreno, String categoria,
 			String resumen) {
@@ -91,8 +86,6 @@ public class ListaPeliculas<T> implements IDatos<T> {
 	public void a�adirPelicula(T pelicula, String titulo, String director, int fechaEstreno, String categoria,
 			String resumen, String url) {
 		// TODO Auto-generated method stub
-		
-	}
 
-	
+	}
 }

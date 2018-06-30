@@ -17,5 +17,5 @@ public interface IServicios<T> {
 	
 	public void recorrerLista (T lista);
 	
-	public LinkedList<Pelicula> obtenerPeliculas();
+	public LinkedList<Pelicula> getListaPelis();
 }
