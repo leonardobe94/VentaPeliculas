@@ -129,4 +129,15 @@ public class Videoclub extends HttpServlet {
 		LinkedList<Pelicula> lista = servicios.getListaPelis();
 		return lista;
 	}
+	
+	public LinkedList<Pelicula> mostrarCategoria(String categoria) {
+		LinkedList<Pelicula> lista = cargarPeliculas();
+		LinkedList<Pelicula> listaCat = new LinkedList<Pelicula>();
+		for (Pelicula peli: lista){
+			if (peli.getCategoria() == categoria){
+				listaCat.add(peli);
+			}
+		}
+		return listaCat;
+	}
 }
