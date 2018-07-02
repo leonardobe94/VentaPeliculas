@@ -39,7 +39,15 @@ public class Videoclub extends HttpServlet {
 			throws ServletException, IOException {
 		System.out.println("Esta en el servlet");
 		String titulo = request.getParameter("query");
-		System.out.println("tipoAccion: "+titulo);
+		String tipoAccion = request.getParameter("accion");
+		System.out.println("tipoAccion: "+tipoAccion);
+		if(tipoAccion.equals("buscarPeli")){
+			Pelicula pelicula = buscarPelicula(titulo);
+			request.setAttribute("pelicula", pelicula);
+			System.out.println(pelicula.toString());
+		    RequestDispatcher view = request.getRequestDispatcher("/Pelicula.jsp");
+		    view.forward(request,response);
+		}
 		// mostrar imagenes en principal
 		/*
 		 * request.setAttribute("paises", op.Listado()); RequestDispatcher view

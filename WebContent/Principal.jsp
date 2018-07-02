@@ -39,7 +39,7 @@
 									<c:forEach var="pelicula" items="${listado}">
 										<div class="col-4">
 											${pelicula.titulo} <span class="image fit"><img
-												src=${pelicula.url } alt="" /></span>
+												src=${pelicula.url} alt="" /></span>
 										</div>
 									</c:forEach>
 								</div>
@@ -60,6 +60,7 @@
 					<form method="post" action="Videoclub">
 						<input type="text" name="query" id="query" placeholder="Buscar pelicula" />
 						<input type="submit" name="enter" id="enter" value="buscar"/>
+						<input type="hidden" name="accion" value="buscarPeli"/>
 					</form>
 				</section>
 				<!-- Menu -->
