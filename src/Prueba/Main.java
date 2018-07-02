@@ -23,10 +23,15 @@ public class Main {
 
 		//Clase obejerio = new Clase();
 		Servicios servicio = new Servicios();
-		String titulo = "Spirit";
-		Pelicula pelicula = new Pelicula();
-		pelicula = (Pelicula) servicio.buscarPelicula(titulo);
-		System.out.println(pelicula.toString());
+		String titulo = "V de Vendetta";
+		String director = "frgnjfihj";
+		int fechaEstreno = 2006;
+		String categoria = "Drama";
+		String resumen = "dgnjfkdhytrjkgdfjklgjdfkgnjklh";
+		String url = "images/v.jpg";
+		
+		 servicio.añadirPelicula(titulo, director, fechaEstreno, categoria, resumen, url);
+		
 		
 		
 	}

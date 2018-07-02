@@ -99,4 +99,9 @@ public class Videoclub extends HttpServlet {
 		return (Pelicula) servicio.buscarPelicula(titulo);
 
 	}
+	public void añadirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen, String url){
+		Servicios servicio = new Servicios();
+		servicio.añadirPelicula(titulo, director, fechaEstreno, categoria, resumen, url);
+		
+	}
 }
