@@ -110,7 +110,7 @@ public class BaseDatos {
 	 * las peliculas
 	 * 
 	 */
-	public boolean insertar(/* int id, */ String titulo, String director, int fechaEstreno, String categoria,
+	public void insertar(String titulo, String director, int fechaEstreno, String categoria,
 			String resumen, String url) {
 		String sql = "insert into peliculas (Titulo,Director,FechaEstreno,Categorias,Resumen,Url) "
 				+ "values (?,?,?,?,?,?)";
@@ -129,7 +129,7 @@ public class BaseDatos {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return true;
+	
 	}
 	public Pelicula buscarPelicula (String titulo){
 			String ficha = "select Titulo, Director, FechaEstreno, Categorias, Resumen, Url from peliculas where Titulo ='"+titulo+"'";

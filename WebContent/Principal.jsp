@@ -30,16 +30,8 @@
 
 				<!-- Content -->
 				<section>
-
-					<!-- Content -->
-					<h2 id="content"></h2>
-					<p></p>
-
-					<div class="col-6 col-12-small"></div>
-					<div class="col-6 col-12-small"></div>
-
 					<div class="row gtr-200">
-						<div class="col-6 col-12-medium">
+						<div class="col-12-medium">
 							<span class="image fit"><img src="images/netflix.jpg"
 								alt="" /></span>
 							<div class="box alt">
@@ -47,7 +39,7 @@
 									<c:forEach var="pelicula" items="${listado}">
 										<div class="col-4">
 											${pelicula.titulo} <span class="image fit"><img
-												src=${pelicula.url } alt="" /></span>
+												src=${pelicula.url} alt="" /></span>
 										</div>
 									</c:forEach>
 								</div>
@@ -55,9 +47,7 @@
 
 						</div>
 					</div>
-
 				</section>
-
 			</div>
 		</div>
 
@@ -70,6 +60,7 @@
 					<form method="post" action="Videoclub">
 						<input type="text" name="query" id="query" placeholder="Buscar pelicula" />
 						<input type="submit" name="enter" id="enter" value="buscar"/>
+						<input type="hidden" name="accion" value="buscarPeli"/>
 					</form>
 				</section>
 				<!-- Menu -->
@@ -78,7 +69,7 @@
 						<h2>Menu</h2>
 					</header>
 					<ul>
-						<li><a href="<%=request.getContextPath() + "/Videoclub"%>">Peliculas</a></li>
+						<li><a href="<%=request.getContextPath() + "/Videoclub?accion=categoria"%>">Peliculas</a></li>
 						<li><span class="opener">Categoria</span>
 							<ul>
 								<li><a href="#">Ciencia Ficion</a></li>

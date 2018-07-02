@@ -22,6 +22,7 @@ public class Main {
 		//conexion.insertar("Harry Potter", "carlos", 2010, "Ficcion", "guay", "/path");
 
 		//Clase obejerio = new Clase();
+
 		/*Servicios servicio = new Servicios();
 		String titulo = "Spirit";
 		Pelicula pelicula = new Pelicula();
@@ -35,6 +36,17 @@ public class Main {
 		for (Pelicula pel: pelicula){
 		System.out.println(pel.toString());
 		}
+
+		Servicios servicio = new Servicios();
+		String titulo = "V de Vendetta";
+		String director = "frgnjfihj";
+		int fechaEstreno = 2006;
+		String categoria = "Drama";
+		String resumen = "dgnjfkdhytrjkgdfjklgjdfkgnjklh";
+		String url = "images/v.jpg";
+		
+		 servicio.añadirPelicula(titulo, director, fechaEstreno, categoria, resumen, url);
+
 		
 		
 	}
