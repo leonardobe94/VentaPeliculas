@@ -131,5 +131,29 @@ public class BaseDatos {
 		}
 		return true;
 	}
+	public Pelicula buscarPelicula (String titulo){
+			String ficha = "select Titulo, Director, FechaEstreno, Categorias, Resumen, Url from peliculas where Titulo ='"+titulo+"'";
+						Pelicula pelicula =null;
+			try {
+				Statement s = conexion.createStatement();
+				ResultSet rs = s.executeQuery(ficha);
+				
+				while (rs.next()) {
+					String titulo2 = rs.getString("Titulo");
+					String director = rs.getString("Director");
+					int fechaEstreno=rs.getInt("FechaEstreno");
+					String categoria=rs.getString("Categorias");
+					String resumen=rs.getString("Resumen");
+					String url = rs.getString("Url");
+					pelicula = new Pelicula(titulo2, director, fechaEstreno, categoria, resumen, url);
+					
+				}
 
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	return pelicula;
+		}
+	
 }

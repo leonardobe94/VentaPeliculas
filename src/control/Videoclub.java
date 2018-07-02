@@ -1,6 +1,7 @@
 package control;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.LinkedList;
 
 import javax.servlet.RequestDispatcher;
@@ -37,12 +38,16 @@ public class Videoclub extends HttpServlet {
 	protected void procesarRespuesta(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("Esta en el servlet");
+		String titulo = request.getParameter("query");
+		System.out.println("tipoAccion: "+titulo);
 		// mostrar imagenes en principal
 		/*
 		 * request.setAttribute("paises", op.Listado()); RequestDispatcher view
 		 * = request.getRequestDispatcher("/listado.jsp"); view.forward(request,
 		 * response);
 		 */
+		
+		
 		servicios = new Servicios();
 		LinkedList<Pelicula> lista = servicios.getListaPelis();				
 		request.setAttribute("listado", lista);
@@ -50,22 +55,24 @@ public class Videoclub extends HttpServlet {
 		RequestDispatcher view = request.getRequestDispatcher("Principal.jsp");
 		view.forward(request, response);
 		
+		
+		
 
 		// Buscar pelicula
-		/**
-		 * String titulo = request.getParameter("titulo");
-		 */
+		
+		 Pelicula pelicula = (Pelicula) servicios.buscarPelicula(titulo);
+		 System.out.println(pelicula.toString());
+		 //String titulo = request.getParameter("titulo");
+		 
 		// Recopilar respuesta
-		/**
-		 * servicios = new Servicios(); Pelicula pelicula =
-		 * servicios.buscarPelicula("titulo");
-		 */
+		 
+		 
 		// Salir
-		/**
-		 * RequestDispatcher view =
-		 * request.getRequestDispatcher("Pelicula.jsp"); view.forward(request,
-		 * response);
-		 */
+		
+		 request.setAttribute("titulo", pelicula);
+		 RequestDispatcher ver = request.getRequestDispatcher("Pelicula.jsp"); 
+		 ver.forward(request, response);
+		 
 		// Modificar pelicula
 		/**
 		 * String titulo = request.getParameter("Titulo"); String director =
@@ -139,5 +146,11 @@ public class Videoclub extends HttpServlet {
 			}
 		}
 		return listaCat;
+	}
+	public Pelicula buscarPelicula(String titulo){
+		Servicios servicio = new Servicios();
+		return (Pelicula) servicio.buscarPelicula(titulo);
+		
+		
 	}
 }
