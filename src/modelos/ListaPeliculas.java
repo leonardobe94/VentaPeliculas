@@ -2,6 +2,12 @@ package modelos;
 
 import java.util.LinkedList;
 
+/**
+ * @author David
+ * @version 02.07.2018
+ * 
+ */
+
 import datos.BaseDatos;
 import datos.IDatos;
 
@@ -60,6 +66,17 @@ public class ListaPeliculas<T> implements IDatos<T> {
 		// accerder al metodo
 		pelicula = conexion.buscarPelicula(titulo);
 		return (T) pelicula;// La obligamos a ser objeto
+
+	}
+	
+	public LinkedList<Pelicula> mostrarCategorias(String categorias) {
+		// crear metodo buscar pelicula
+		Pelicula pelicula = new Pelicula();
+		// Creo una conexiÃ³n para para cargar la base de datos en la lista
+		BaseDatos conexion = new BaseDatos();
+		// accerder al metodo
+		LinkedList<Pelicula> listaCat = conexion.mostrarCategorias(categorias);
+		return listaCat;// La obligamos a ser objeto
 
 	}
 

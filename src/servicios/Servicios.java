@@ -33,6 +33,11 @@ public class Servicios implements IServicios {
 		Pelicula pelicula =(Pelicula) listaPelis.buscarPelicula(titulo);
 		return pelicula;
 	}
+	
+	public LinkedList <Pelicula> mostrarCategorias (String categorias){
+		LinkedList <Pelicula> listaCat = listaPelis.mostrarCategorias(categorias);
+		return listaCat;
+	}
 
 	@Override
 	public void borrarPelicula(Object pelicula) {

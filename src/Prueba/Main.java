@@ -22,11 +22,19 @@ public class Main {
 		//conexion.insertar("Harry Potter", "carlos", 2010, "Ficcion", "guay", "/path");
 
 		//Clase obejerio = new Clase();
-		Servicios servicio = new Servicios();
+		/*Servicios servicio = new Servicios();
 		String titulo = "Spirit";
 		Pelicula pelicula = new Pelicula();
 		pelicula = (Pelicula) servicio.buscarPelicula(titulo);
 		System.out.println(pelicula.toString());
+		*/
+		Servicios servicio = new Servicios();
+		String categoria = "Animacion";
+		LinkedList<Pelicula> pelicula = new LinkedList<Pelicula>();
+		pelicula = servicio.mostrarCategorias(categoria);
+		for (Pelicula pel: pelicula){
+		System.out.println(pel.toString());
+		}
 		
 		
 	}

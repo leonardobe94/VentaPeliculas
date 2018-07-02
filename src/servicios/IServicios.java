@@ -13,6 +13,8 @@ public interface IServicios<T> {
 	
 	public T buscarPelicula(String titulo);
 	
+	public LinkedList <Pelicula> mostrarCategorias (String categorias);
+	
 	public void borrarPelicula (T pelicula);
 	
 	public void recorrerLista (T lista);
