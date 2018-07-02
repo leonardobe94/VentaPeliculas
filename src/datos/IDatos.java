@@ -4,7 +4,7 @@ public interface IDatos<T> {
 	
 
 	
-	public void añadirPelicula(T pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen, String url);
+	public void añadirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen, String url);
 
 	
 	public void modificarPelicula (T pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen);
@@ -16,6 +16,6 @@ public interface IDatos<T> {
 	public void recorrerLista ();
 
 
-	void añadirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen, String url);
+	
 	
 }

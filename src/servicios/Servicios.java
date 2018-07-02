@@ -41,8 +41,8 @@ public class Servicios implements IServicios {
 
      */
 	@Override
-	public void añadirPelicula(Object pelicula, String titulo, String director, int fechaEstreno, String categoria, String resumen, String url) {
-		listaPelis.añadirPelicula(pelicula, titulo, director, fechaEstreno, categoria, resumen, url);
+	public void añadirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen, String url) {
+		listaPelis.añadirPelicula(titulo, director, fechaEstreno, categoria, resumen, url);
 
 		/**
 

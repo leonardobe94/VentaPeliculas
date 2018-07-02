@@ -36,9 +36,10 @@ public class ListaPeliculas<T> implements IDatos<T> {
 
 	public void añadirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen,
 			String url) {
-		Pelicula peli = new Pelicula(titulo, director, fechaEstreno, categoria, resumen, url);
-
+		BaseDatos pelicula = new BaseDatos();
+		pelicula.insertar(titulo, director, fechaEstreno, categoria, resumen, url);
 	}
+	
 
 	@Override
 	public void modificarPelicula(T pelicula, String titulo, String director, int fechaEstreno, String categoria,
@@ -82,10 +83,5 @@ public class ListaPeliculas<T> implements IDatos<T> {
 
 	}
 
-	@Override
-	public void añadirPelicula(T pelicula, String titulo, String director, int fechaEstreno, String categoria,
-			String resumen, String url) {
-		// TODO Auto-generated method stub
-
-	}
+	
 }
