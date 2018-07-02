@@ -57,9 +57,9 @@
 
 				<!-- Search -->
 				<section id="search" class="alt">
-					<form method="post" action="#">
-						<input type="text" name="query" id="query"
-							placeholder="Buscar pelicula" />
+					<form method="post" action="Videoclub">
+						<input type="text" name="query" id="query" placeholder="Buscar pelicula" />
+						<input type="submit" name="enter" id="enter" value="buscar"/>
 					</form>
 				</section>
 				<!-- Menu -->

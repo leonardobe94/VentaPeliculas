@@ -11,7 +11,7 @@ public class ListaPeliculas<T> implements IDatos<T> {
 
 	// No tocar
 	public ListaPeliculas() {
-		// Creo una conexiÃ³n para para cargar la base de datos en la lista		
+		// Creo una conexiÃ³n para para cargar la base de datos en la lista
 	}
 
 	public ListaPeliculas(LinkedList<Pelicula> listaPelis) {
@@ -54,13 +54,13 @@ public class ListaPeliculas<T> implements IDatos<T> {
 	@Override
 	public T buscarPelicula(String titulo) {
 		// crear metodo buscar pelicula
-		Pelicula pelicula = null;
-		for (int i = 0; i < listaPelis.size(); i++) {
-			if (titulo.equalsIgnoreCase(listaPelis.get(i).getTitulo())) {
-				pelicula = listaPelis.get(i);
-			}
-		}
-		return (T) pelicula;
+		Pelicula pelicula = new Pelicula();
+		// Creo una conexiÃ³n para para cargar la base de datos en la lista
+		BaseDatos conexion = new BaseDatos();
+		// accerder al metodo
+		pelicula = conexion.buscarPelicula(titulo);
+		return (T) pelicula;// La obligamos a ser objeto
+
 	}
 
 	@Override
