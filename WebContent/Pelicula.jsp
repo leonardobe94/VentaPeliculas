@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML>
 
 <html>
@@ -30,13 +31,13 @@
 				<!-- Content -->
 				<section>
 					<header class="main">
-						<h1>El planeta del tesoro</h1>
+						  <h1>${pelicula.titulo}:</h1>
+						
 					</header>
 					<div class="box alt">
 						<div class="row gtr-50 gtr-uniform">
 							<div class="col-4">
-								<span class="image fit"><img src="images/planeta.png"
-									alt="" /> </span>
+								<span class="image fit"><img src="images/planeta.png" /> </span>
 							</div>
 						</div>
 					</div>

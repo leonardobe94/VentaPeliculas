@@ -26,12 +26,12 @@ public class Pelicula {
 	
 	public Pelicula(String titulo2, String director2, int fechaEstreno2, String categoria2, String resumen2,
 			String url2) {
-		this.titulo = titulo;
-		this.director = director;
-		this.fechaEstreno = fechaEstreno;
-		this.categoria = categoria;
-		this.resumen = resumen;
-		this.url = url;
+		this.titulo = titulo2;
+		this.director = director2;
+		this.fechaEstreno = fechaEstreno2;
+		this.categoria = categoria2;
+		this.resumen = resumen2;
+		this.url = url2;
 		
 	}
 

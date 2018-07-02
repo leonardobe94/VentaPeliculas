@@ -20,10 +20,14 @@ public class Main {
 		
 		//BaseDatos conexion = new BaseDatos();
 		//conexion.insertar("Harry Potter", "carlos", 2010, "Ficcion", "guay", "/path");
+
+		//Clase obejerio = new Clase();
+		Servicios servicio = new Servicios();
+		String titulo = "Spirit";
+		Pelicula pelicula = new Pelicula();
+		pelicula = (Pelicula) servicio.buscarPelicula(titulo);
+		System.out.println(pelicula.toString());
 		
-		IServicios<Pelicula> servicios = new Servicios();
-		LinkedList<Pelicula> lista = servicios.getListaPelis();
-		System.out.println(lista.get(0).getTitulo());
 		
 	}
 
