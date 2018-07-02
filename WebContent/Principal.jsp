@@ -30,16 +30,8 @@
 
 				<!-- Content -->
 				<section>
-
-					<!-- Content -->
-					<h2 id="content"></h2>
-					<p></p>
-
-					<div class="col-6 col-12-small"></div>
-					<div class="col-6 col-12-small"></div>
-
 					<div class="row gtr-200">
-						<div class="col-6 col-12-medium">
+						<div class="col-12-medium">
 							<span class="image fit"><img src="images/netflix.jpg"
 								alt="" /></span>
 							<div class="box alt">
@@ -55,9 +47,7 @@
 
 						</div>
 					</div>
-
 				</section>
-
 			</div>
 		</div>
 
