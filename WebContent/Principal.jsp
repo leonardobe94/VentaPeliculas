@@ -69,7 +69,7 @@
 						<h2>Menu</h2>
 					</header>
 					<ul>
-						<li><a href="<%=request.getContextPath() + "/Videoclub"%>">Peliculas</a></li>
+						<li><a href="<%=request.getContextPath() + "/Videoclub?accion=categoria"%>">Peliculas</a></li>
 						<li><span class="opener">Categoria</span>
 							<ul>
 								<li><a href="#">perro</a></li>
