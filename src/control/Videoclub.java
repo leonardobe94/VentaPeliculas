@@ -83,6 +83,15 @@ public class Videoclub extends HttpServlet {
 		return lista;
 	}
 
+	
+	public LinkedList<Pelicula> mostrarCategorias(String categorias) {
+		Servicios servicio = new Servicios();
+		return servicio.mostrarCategorias(categorias);
+	}
+	
+	public Pelicula buscarPelicula(String titulo){
+
+
 	public LinkedList<Pelicula> mostrarCategoria(String categoria) {
 		LinkedList<Pelicula> lista = cargarPeliculas();
 		LinkedList<Pelicula> listaCat = new LinkedList<Pelicula>();
@@ -95,13 +104,14 @@ public class Videoclub extends HttpServlet {
 	}
 
 	public Pelicula buscarPelicula(String titulo) {
+
 		Servicios servicio = new Servicios();
 		return (Pelicula) servicio.buscarPelicula(titulo);
 
 	}
-	public void añadirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen, String url){
+	public void aÃ±adirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen, String url){
 		Servicios servicio = new Servicios();
-		servicio.añadirPelicula(titulo, director, fechaEstreno, categoria, resumen, url);
+		servicio.aÃ±adirPelicula(titulo, director, fechaEstreno, categoria, resumen, url);
 		
 	}
 }

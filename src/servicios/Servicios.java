@@ -37,12 +37,12 @@ public class Servicios implements IServicios {
 
      * Constructor para la capa
 
-     * @param añadirPelicula metodo para añadir las peliculas
+     * @param aÃ±adirPelicula metodo para aÃ±adir las peliculas
 
      */
 	@Override
-	public void añadirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen, String url) {
-		listaPelis.añadirPelicula(titulo, director, fechaEstreno, categoria, resumen, url);
+	public void aÃ±adirPelicula(String titulo, String director, int fechaEstreno, String categoria, String resumen, String url) {
+		listaPelis.aÃ±adirPelicula(titulo, director, fechaEstreno, categoria, resumen, url);
 
 		/**
 
@@ -68,9 +68,17 @@ public class Servicios implements IServicios {
 		Pelicula pelicula =(Pelicula) listaPelis.buscarPelicula(titulo);
 		return pelicula;
 	}
+
+	
+	public LinkedList <Pelicula> mostrarCategorias (String categorias){
+		LinkedList <Pelicula> listaCat = listaPelis.mostrarCategorias(categorias);
+		return listaCat;
+	}
+
 	/**
 
     * Constructor para la capa
+
 
     * @param borrarPelicula metodo para borrar las peliculas
 

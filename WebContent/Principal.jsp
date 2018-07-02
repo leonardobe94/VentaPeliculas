@@ -72,10 +72,9 @@
 						<li><a href="<%=request.getContextPath() + "/Videoclub?accion=categoria"%>">Peliculas</a></li>
 						<li><span class="opener">Categoria</span>
 							<ul>
-								<li><a href="#">perro</a></li>
-								<li><a href="#">Ipsum Adipiscing</a></li>
-								<li><a href="#">Tempus Magna</a></li>
-								<li><a href="#">Feugiat Veroeros</a></li>
+								<li><a href="#">Ciencia Ficion</a></li>
+								<li><a href="#">Animacion</a></li>
+								<li><a href="#">Familiar</a></li>
 							</ul></li>
 					</ul>
 				</nav>
